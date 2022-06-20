@@ -27,7 +27,7 @@ class Location extends CI_Controller {
 			if ($this->form_validation->run() === FALSE)
 			{
 				# Get all locations back from database
-				$data['locations'] = $this->location_model->get_news();
+				$data['locations'] = $this->location_model->get_locations();
 
 				# Load the view
 				$this->load->view('templates/header', $data);
@@ -76,7 +76,7 @@ class Location extends CI_Controller {
 				$this->location_model->set_location($data);
 
 				# Get all locations back from database
-				$data['locations'] = $this->location_model->get_news();
+				$data['locations'] = $this->location_model->get_locations();
 
 				# Load the view
 				$this->load->view('templates/header', $data);
